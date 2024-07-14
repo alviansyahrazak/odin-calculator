@@ -47,9 +47,11 @@ const operatorButtonsValueClick = (button) => {
             calculatorDisplayBottom.textContent = firstNumber
         }
     }
-    currentOperator = button.value
-    isSecondOperand = true
-    calculatorDisplayTop.textContent =`${firstNumber} ${currentOperator}`
+    if(firstNumber !== "" || secondNumber !== "" ) {
+        currentOperator = button.value
+        isSecondOperand = true
+        calculatorDisplayTop.textContent =`${firstNumber} ${currentOperator}`
+    }
 }
 
 const add = (a, b) => a + b;
