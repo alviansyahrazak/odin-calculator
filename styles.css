@@ -3,6 +3,11 @@
     src: url(./assets/fonts/Helvetica.ttf);
 }
 
+@font-face {
+    font-family: "Digital-7";
+    src: url(./assets/fonts/digital-7.ttf);
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -71,11 +76,11 @@ body {
 
 
 .calculator_display {
-    height: 100px;
+    height: 96px;
     margin: 24px;
     padding: 8px; 
     text-align: right;
-    font-weight: 550;
+    overflow: hidden;
     border-radius: 12px;
     background: #8db2ff;
     box-shadow: 
@@ -103,17 +108,16 @@ body {
 
 .calculator_display_top {
     font-size: 1.5em;
-    margin-bottom: 12px;
     border-radius: 8px 8px 0 0;
     overflow: hidden;
     height: 28px;
 }
 
 .calculator_display_bottom {
-    font-size: 3em;
+    font-size: 4em;
     border-radius: 0 0 8px 8px;
     overflow: hidden;
-    height: 44px;
+    height: 52px;
 }
 
 .calculator_keys {
