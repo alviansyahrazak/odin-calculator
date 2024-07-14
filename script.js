@@ -14,6 +14,10 @@ let secondNumber = ""
 currentOperator = null
 isSecondOperand = false
 
+document.addEventListener('dblclick', (e) => {
+    e.preventDefault();
+});
+
 const removeLeadingZeros = (value) => {
     if (value.length > 1 && value[0] === '0') {
         return value.replace(/^0+(?!$)/, "0");
