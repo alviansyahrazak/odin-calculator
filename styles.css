@@ -76,7 +76,7 @@ body {
 
 
 .calculator_display {
-    height: 96px;
+    height: 100%;
     margin: 24px;
     padding: 8px; 
     text-align: right;
@@ -117,7 +117,7 @@ body {
     font-size: 4em;
     border-radius: 0 0 8px 8px;
     overflow: hidden;
-    height: 52px;
+    height: 100%;
 }
 
 .calculator_keys {
