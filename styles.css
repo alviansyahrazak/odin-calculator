@@ -3,11 +3,6 @@
     src: url(./assets/fonts/Helvetica.ttf);
 }
 
-@font-face {
-    font-family: "Digital-7";
-    src: url(./assets/fonts/digital-7.ttf);
-}
-
 * {
     padding: 0;
     margin: 0;
