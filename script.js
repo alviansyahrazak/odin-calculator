@@ -14,7 +14,7 @@ let secondNumber = ""
 currentOperator = null
 isSecondOperand = false
 
-document.addEventListener('dblclick', (e) => {
+document.querySelector('.calculator_frame').addEventListener('dblclick', function(e) {
     e.preventDefault();
 });
 
