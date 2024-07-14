@@ -19,8 +19,11 @@ document.querySelector('.calculator_frame').addEventListener('dblclick', (e) => 
 });
 
 const removeLeadingZeros = (value) => {
+    if (value.startsWith(".")) {
+        value = "0" + value;
+    }
     if (value.length > 1 && value[0] === '0') {
-        return value.replace(/^0+(?!$)/, "0");
+        return value.replace(/^0+(?!\.)/, "");
     }
     return value;
 }
@@ -131,18 +134,16 @@ const decimalButtonClick = () => {
         if(secondNumber === "") {
             secondNumber = "0"
         }
-        if(isSecondOperand && secondNumber !== "") {
-            if(!secondNumber.includes(".")) {
-                secondNumber = parseFloat(secondNumber) + "."
-                calculatorDisplayBottom.textContent = secondNumber
-            }
-        }
+        if(!secondNumber.includes(".")) {
+            secondNumber += "."
+            calculatorDisplayBottom.textContent = secondNumber
+       }
     } else {
         if(firstNumber === "") {
             firstNumber = "0"
         }
         if(!firstNumber.includes(".")) {
-            firstNumber = parseFloat(firstNumber) + "."
+            firstNumber += "."
             calculatorDisplayBottom.textContent = firstNumber
         }
     }
